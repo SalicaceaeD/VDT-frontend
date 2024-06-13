@@ -6,13 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "https://github.com/Salicaceae/VDT-frontend.git"
+    repoURL: "https://github.com/SalicaceaeD/VDT-frontend.git"
     path: argocd
     targetRevision: HEAD
-    helm:
-      valueFiles:
-        - >-
-          https://raw.githubusercontent.com/SalicaceaeD/VDT-frontend-config/main/values.yaml
   destination:
     namespace: vdt
     server: "https://kubernetes.default.svc"
