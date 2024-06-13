@@ -7,11 +7,14 @@ spec:
   project: default
   source:
     repoURL: "https://github.com/Salicaceae/VDT-frontend.git"
+    path: argocd
     targetRevision: HEAD
     helm:
       valueFiles:
         - >-
           https://raw.githubusercontent.com/SalicaceaeD/VDT-frontend-config/main/values.yaml
   destination:
-    server: "https://192.168.11.101:6443"
-    namespace: 
+    server: "https://192.168.11.101:31586"
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
